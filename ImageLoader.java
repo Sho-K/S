@@ -1,6 +1,5 @@
 
 import java.awt.Image;
-import java.awt.image.ImageObserver;
 import java.awt.image.BufferedImage;
 
 import java.io.File;
@@ -27,9 +26,13 @@ public class ImageLoader{
 		try{
 			File file = new File( filepath );
 			BufferedImage image = ImageIO.read( file );
+			images.put( key, image );
 		}catch( IOException e ){
 			
 		}
 		return key;
+	}
+	
+	public BufferedImage get( int key ){
 	}
 }
