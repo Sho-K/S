@@ -11,7 +11,7 @@ import java.awt.geom.Point2D;
 
 import javax.imageio.ImageIO;
 
-public abstract class Character{
+public abstract class Character implements Drawable{
 	protected BufferedImage 	srcImage;
 	
  	protected Dimension 		size;
@@ -46,7 +46,4 @@ public abstract class Character{
 		velocity.y = 0.0f;
 		moving = false;
 	}
-
-	
-	public abstract void draw( java.awt.Graphics g );
 }

@@ -52,7 +52,7 @@ public class STG extends javax.swing.JPanel implements Runnable{
 		bb.setColor( java.awt.Color.BLACK );
 		bb.fillRect( 0, 0, CLIENT_WIDTH, CLIENT_HEIGHT );
 		
-		if( player != null ) player.draw( bb );
+		if( player != null ) player.draw( bb, this );
 		
 		g.drawImage( backBuffer, 0, 0, this );
 	}

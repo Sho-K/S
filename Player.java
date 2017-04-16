@@ -2,6 +2,8 @@
 import java.awt.Image;
 import java.awt.Dimension;
 
+import java.awt.image.ImageObserver;
+
 import java.awt.geom.Point2D;
 
 public class Player extends Character{
@@ -88,9 +90,9 @@ public class Player extends Character{
 	}
 	
 	@Override
-	public void draw( java.awt.Graphics g ){
+	public void draw( java.awt.Graphics g, ImageObserver observer ){
 		int x = position.x - halfSize.width;
 		int y = position.y - halfSize.height;
-		g.drawImage( animations[animationState].getCurrentCell(), x, y, size.width, size.height, null );
+		g.drawImage( animations[animationState].getCurrentCell(), x, y, size.width, size.height, observer );
 	}
 }
